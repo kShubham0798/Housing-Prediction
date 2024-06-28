@@ -25,4 +25,17 @@ class HousingException(Exception):
         return error_message
     
     def __str__(self):
+        """
+        if we print(HousingException()) it will return 
+        the print statement of class, 
+        how this object should be visible in print statement
+        """
         return self.error_message
+    
+    def __repr__(self) -> str:
+        """
+        if we call HousingException() it will return 
+        the representation of class or object of this class,
+        how this object should be visible without print statement
+        """
+        return HousingException.__init__.str()
