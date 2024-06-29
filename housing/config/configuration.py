@@ -44,7 +44,7 @@ class Configuration:
             ingestion_train_dir=os.path.join(ingested_data_dir,
                                              data_ingestion_info[DATA_INGESTION_TRAIN_DIR_KEY])
             
-            ingestion_test_dir=os.path.join(data_ingestion_artifact_dir,
+            ingestion_test_dir=os.path.join(ingested_data_dir,
                                             data_ingestion_info[DATA_INGESTION_TEST_DIR_KEY])
 
             data_ingestion_config=DataIngestionConfig(dataset_download_url=dataset_download_url, 
