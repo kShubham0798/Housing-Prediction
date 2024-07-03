@@ -104,7 +104,7 @@ class DataValidation:
 
     def save_data_drift_report_page(self):
         try:
-            dashboard=Dashboard(tabs=[DataDriftTab])
+            dashboard=Dashboard(tabs=[DataDriftTab()])
             train_df,test_df=self.get_train_and_test_df()
             dashboard.calculate(train_df,test_df)
 
@@ -140,6 +140,9 @@ class DataValidation:
                                                             is_validated=True,
                                                             message="Data Validation performed successfully")
             logging.info(f"Data Validation artifact: {data_validation_artifact}")
+            return data_validation_artifact
         except Exception as e:
             raise HousingException(e,sys) from e
         
+    def __del__(self):
+        logging.info(f"{'='*20}Data Validation log completed. {'='*20} \n\n")
