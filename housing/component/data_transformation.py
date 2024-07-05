@@ -189,7 +189,7 @@ class DataTransformation:
             save_object(file_path=preprocessed_object_file_path,obj=preprocessing_obj)
 
             data_transformation_artifact=DataTransformationArtifact(is_transformed=True, 
-                                                                    message="Data Transformation i successfull", 
+                                                                    message="Data Transformation is successfull", 
                                                                     transformed_train_file_path=transformed_train_file_path, 
                                                                     transformed_test_file_path=transformed_test_file_path, 
                                                                     preprocessed_object_file_path=preprocessed_object_file_path)

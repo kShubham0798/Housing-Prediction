@@ -16,11 +16,13 @@ DataTransformationConfig=namedtuple("DataTransformationConfig",["add_bedroom_per
 ## feature engineering of "ingestion_train_dir" we get a transformed data and it will stored in ===> "tranformed_train_dir"
 
 
-ModelTrainerConfig=namedtuple("ModelTrainerConfig",["trained_model_file_path","base_accuracy"])
+ModelTrainerConfig = namedtuple("ModelTrainerConfig", ["trained_model_file_path","base_accuracy","model_config_file_path"])
+
 
 ## stored the trained model pickle file in ====>"trained_model_file_path"
 
-ModelEvaluationConfig=namedtuple("ModelEvaluationConfig",["model_evaluation_file_path","time_stamp"])
+ModelEvaluationConfig = namedtuple("ModelEvaluationConfig", ["model_evaluation_file_path","time_stamp"])
+
 
 ## All model in prod is stored in ===>"model_evaluation_file_path" so that we can compare our model with prod model 
 
