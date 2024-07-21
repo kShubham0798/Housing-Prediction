@@ -1,2 +1,2 @@
-# ML-Project_1
+# Housing Prediction
 Let's play the data
